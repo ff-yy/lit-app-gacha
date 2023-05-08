@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Gacha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gacha.png" translatesAutoresizingMaskIntoConstraints="NO" id="NLK-Jh-i4K">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhk-fz-yOt">
+                                <rect key="frame" x="37.666666666666657" y="256" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="VF9-IN-fqe"/>
+                                    <constraint firstAttribute="height" constant="300" id="gdJ-09-OGb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="Presentbox.png"/>
+                                <connections>
+                                    <segue destination="F3e-6T-Enz" kind="presentation" modalPresentationStyle="fullScreen" id="jXA-j3-z3n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NLK-Jh-i4K" secondAttribute="trailing" id="Avx-CA-WIl"/>
+                            <constraint firstItem="NLK-Jh-i4K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EYA-D9-YB5"/>
+                            <constraint firstAttribute="bottom" secondItem="NLK-Jh-i4K" secondAttribute="bottom" id="GlJ-cx-tNf"/>
+                            <constraint firstItem="Xhk-fz-yOt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pbQ-g4-jJn"/>
+                            <constraint firstItem="Xhk-fz-yOt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t7p-BK-8en"/>
+                            <constraint firstItem="NLK-Jh-i4K" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ucj-ZS-VxJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.04347826086958" y="-27.455357142857142"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="vVk-6h-kDF">
+            <objects>
+                <viewController id="F3e-6T-Enz" customClass="ResultViewController" customModule="Gacha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CSg-04-KSE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgBlue.png" translatesAutoresizingMaskIntoConstraints="NO" id="yqB-VJ-3ge">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRl-QX-Bby">
+                                <rect key="frame" x="31" y="48" width="76" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="もどる"/>
+                                <connections>
+                                    <action selector="back" destination="F3e-6T-Enz" eventType="touchUpInside" id="4Lh-oX-Yhb"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone.png" translatesAutoresizingMaskIntoConstraints="NO" id="sLc-4G-Hzb">
+                                <rect key="frame" x="37.666666666666657" y="256" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="3AP-aN-0EV"/>
+                                    <constraint firstAttribute="height" constant="300" id="dMi-Uo-gTv"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ggz-Ah-QsS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yqB-VJ-3ge" firstAttribute="trailing" secondItem="Ggz-Ah-QsS" secondAttribute="trailing" id="5FF-z3-Qnc"/>
+                            <constraint firstItem="yqB-VJ-3ge" firstAttribute="top" secondItem="Ggz-Ah-QsS" secondAttribute="top" id="E4x-Jn-CMv"/>
+                            <constraint firstItem="sLc-4G-Hzb" firstAttribute="centerY" secondItem="CSg-04-KSE" secondAttribute="centerY" id="efL-9A-3YT"/>
+                            <constraint firstItem="yqB-VJ-3ge" firstAttribute="bottom" secondItem="Ggz-Ah-QsS" secondAttribute="bottom" id="fIz-cw-KBH"/>
+                            <constraint firstItem="sLc-4G-Hzb" firstAttribute="centerX" secondItem="CSg-04-KSE" secondAttribute="centerX" id="hYX-gO-ddl"/>
+                            <constraint firstItem="yqB-VJ-3ge" firstAttribute="leading" secondItem="Ggz-Ah-QsS" secondAttribute="leading" id="ydg-hP-0Vg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="yqB-VJ-3ge" id="TwC-UU-Pwm"/>
+                        <outlet property="characterImageView" destination="sLc-4G-Hzb" id="9zB-ym-Sxp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bGm-XR-fbh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934" y="-28"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Presentbox.png" width="800" height="800"/>
+        <image name="bgBlue.png" width="390" height="844"/>
+        <image name="gacha.png" width="390" height="844"/>
+        <image name="iphone.png" width="599" height="690"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
